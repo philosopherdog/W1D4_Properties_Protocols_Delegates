@@ -182,10 +182,10 @@
 }
 @end
 
-@interface DelegateTests : XCTestCase
+@interface CopyProgramTests : XCTestCase
 @end
 
-@implementation DelegateTests
+@implementation CopyProgramTests
 
 
 - (void)testCopy1 {

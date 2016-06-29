@@ -13,7 +13,10 @@
 		AA98B1351D23618600E8E293 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA98B1331D23618600E8E293 /* Main.storyboard */; };
 		AA98B1371D23618600E8E293 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA98B1361D23618600E8E293 /* Assets.xcassets */; };
 		AA98B13A1D23618600E8E293 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA98B1381D23618600E8E293 /* LaunchScreen.storyboard */; };
-		AA98B1451D23618600E8E293 /* W1D4BTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA98B1441D23618600E8E293 /* W1D4BTests.m */; };
+		AA98B1511D2361A400E8E293 /* WeakCopyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA98B14F1D2361A400E8E293 /* WeakCopyTests.m */; };
+		AA98B1521D2361A400E8E293 /* PropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA98B1501D2361A400E8E293 /* PropertyTests.m */; };
+		AA98B1541D2361CE00E8E293 /* ProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA98B1531D2361CE00E8E293 /* ProtocolTests.m */; };
+		AA98B1591D236AD300E8E293 /* DelegationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AA98B1581D236AD300E8E293 /* DelegationTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +41,11 @@
 		AA98B1391D23618600E8E293 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA98B13B1D23618600E8E293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA98B1401D23618600E8E293 /* W1D4BTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = W1D4BTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA98B1441D23618600E8E293 /* W1D4BTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = W1D4BTests.m; sourceTree = "<group>"; };
 		AA98B1461D23618600E8E293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA98B14F1D2361A400E8E293 /* WeakCopyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakCopyTests.m; sourceTree = "<group>"; };
+		AA98B1501D2361A400E8E293 /* PropertyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyTests.m; sourceTree = "<group>"; };
+		AA98B1531D2361CE00E8E293 /* ProtocolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolTests.m; sourceTree = "<group>"; };
+		AA98B1581D236AD300E8E293 /* DelegationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegationTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +69,8 @@
 		AA98B11E1D23618600E8E293 = {
 			isa = PBXGroup;
 			children = (
-				AA98B1291D23618600E8E293 /* W1D4B */,
 				AA98B1431D23618600E8E293 /* W1D4BTests */,
+				AA98B1291D23618600E8E293 /* W1D4B */,
 				AA98B1281D23618600E8E293 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,7 +111,10 @@
 		AA98B1431D23618600E8E293 /* W1D4BTests */ = {
 			isa = PBXGroup;
 			children = (
-				AA98B1441D23618600E8E293 /* W1D4BTests.m */,
+				AA98B1501D2361A400E8E293 /* PropertyTests.m */,
+				AA98B14F1D2361A400E8E293 /* WeakCopyTests.m */,
+				AA98B1531D2361CE00E8E293 /* ProtocolTests.m */,
+				AA98B1581D236AD300E8E293 /* DelegationTest.m */,
 				AA98B1461D23618600E8E293 /* Info.plist */,
 			);
 			path = W1D4BTests;
@@ -221,7 +230,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA98B1451D23618600E8E293 /* W1D4BTests.m in Sources */,
+				AA98B1511D2361A400E8E293 /* WeakCopyTests.m in Sources */,
+				AA98B1521D2361A400E8E293 /* PropertyTests.m in Sources */,
+				AA98B1591D236AD300E8E293 /* DelegationTest.m in Sources */,
+				AA98B1541D2361CE00E8E293 /* ProtocolTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

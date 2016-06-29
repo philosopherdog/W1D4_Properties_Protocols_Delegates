@@ -15,8 +15,8 @@
 		AA98B13A1D23618600E8E293 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA98B1381D23618600E8E293 /* LaunchScreen.storyboard */; };
 		AA98B1511D2361A400E8E293 /* WeakCopyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA98B14F1D2361A400E8E293 /* WeakCopyTests.m */; };
 		AA98B1521D2361A400E8E293 /* PropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA98B1501D2361A400E8E293 /* PropertyTests.m */; };
-		AA98B1541D2361CE00E8E293 /* ProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA98B1531D2361CE00E8E293 /* ProtocolTests.m */; };
-		AA98B1591D236AD300E8E293 /* DelegationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AA98B1581D236AD300E8E293 /* DelegationTest.m */; };
+		AA98B1541D2361CE00E8E293 /* DelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA98B1531D2361CE00E8E293 /* DelegateTests.m */; };
+		AA98B1591D236AD300E8E293 /* ProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA98B1581D236AD300E8E293 /* ProtocolTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +44,8 @@
 		AA98B1461D23618600E8E293 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA98B14F1D2361A400E8E293 /* WeakCopyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakCopyTests.m; sourceTree = "<group>"; };
 		AA98B1501D2361A400E8E293 /* PropertyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyTests.m; sourceTree = "<group>"; };
-		AA98B1531D2361CE00E8E293 /* ProtocolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolTests.m; sourceTree = "<group>"; };
-		AA98B1581D236AD300E8E293 /* DelegationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegationTest.m; sourceTree = "<group>"; };
+		AA98B1531D2361CE00E8E293 /* DelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateTests.m; sourceTree = "<group>"; };
+		AA98B1581D236AD300E8E293 /* ProtocolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,8 @@
 			children = (
 				AA98B1501D2361A400E8E293 /* PropertyTests.m */,
 				AA98B14F1D2361A400E8E293 /* WeakCopyTests.m */,
-				AA98B1531D2361CE00E8E293 /* ProtocolTests.m */,
-				AA98B1581D236AD300E8E293 /* DelegationTest.m */,
+				AA98B1581D236AD300E8E293 /* ProtocolTests.m */,
+				AA98B1531D2361CE00E8E293 /* DelegateTests.m */,
 				AA98B1461D23618600E8E293 /* Info.plist */,
 			);
 			path = W1D4BTests;
@@ -232,8 +232,8 @@
 			files = (
 				AA98B1511D2361A400E8E293 /* WeakCopyTests.m in Sources */,
 				AA98B1521D2361A400E8E293 /* PropertyTests.m in Sources */,
-				AA98B1591D236AD300E8E293 /* DelegationTest.m in Sources */,
-				AA98B1541D2361CE00E8E293 /* ProtocolTests.m in Sources */,
+				AA98B1591D236AD300E8E293 /* ProtocolTests.m in Sources */,
+				AA98B1541D2361CE00E8E293 /* DelegateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +414,7 @@
 				AA98B14B1D23618600E8E293 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA98B14C1D23618600E8E293 /* Build configuration list for PBXNativeTarget "W1D4BTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +423,7 @@
 				AA98B14E1D23618600E8E293 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

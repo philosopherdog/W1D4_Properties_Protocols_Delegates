@@ -11,6 +11,7 @@
 // Person1 shows how to hand roll a property
 
 @interface Person1 : NSObject {
+    // explicitly declared backing store
     NSString *_name;
 }
 - (NSString *)name;
@@ -60,12 +61,14 @@
 @implementation Person4
 - (instancetype)init {
     if (self = [super init]) {
+        // I can still write to the backing store
         _name = @"Readonly Frank";
     }
     return self;
 }
 
 - (void)fakeEventWithData:(NSString *)data {
+    // I can also set readonly name with passed in data
     _name = data;
 }
 @end
@@ -85,6 +88,7 @@
 
 - (NSNumber *)bankAccount {
     if (!_bankAccount) {
+        // I'm setting the backing store directly because it's mutator is readonly
         _bankAccount = [self fakeNetworkRequest];
         return _bankAccount;
     }
@@ -96,6 +100,13 @@
     return @(arc4random_uniform(1000));
 }
 
+@end
+
+
+@interface Person6 : NSObject
+@property (getter=isBald) BOOL bald;
+@end
+@implementation Person6
 @end
 
 
@@ -156,7 +167,7 @@
  * They encapsulate our data.
  * What does this mean?
  * It means that the class controls access to its data, both setting it and getting it
- * It means the class can prevent objects from setting its data, do validation checks on that data
+ * It means the class can prevent objects from setting its data, do validation checks on that data, etc
  * Most importantly it means that the class instance can react to code touching its setter and getter.
  * Why would a class instance want to react to its data being set or retrieved?
  */
@@ -175,8 +186,7 @@
 
 /*
  * Marking a property as Readonly prevents setting the backing store using the setter both from the outside and inside the class
- * However, you can set properties marked readonly by talking directly to the backing store using underscore _nameOfBackingStore
- 
+ * However, you can set properties marked readonly by talking directly to the backing store using underscore _nameOfBackingStore privately
  */
 
 - (void)testReadOnlyPropertyNotSettable {
@@ -184,6 +194,7 @@
     // 2 ways to calling the setter, but the compiler knows they're READONLY
 //    sut.name = @"Jo"
 //    [sut setName:@"Jen"];
+    // sut doesn't respond to the selector setName: because it's readonly
     BOOL result = [sut respondsToSelector:@selector(setName:)];
     XCTAssertEqual(result, NO);
 }
@@ -208,6 +219,19 @@
     Person5 *sut = [[Person5 alloc] init];
     NSNumber *result = sut.bankAccount;
     XCTAssertNotNil(result);
+}
+
+#pragma mark - Person6
+
+/*
+ * getter=isBald is a way of specifying the getter as different from the normal getter
+ * this is not just an Objc convention, but is required to make a property KVC compliant
+ */
+
+- (void)testOverridePropertyGetterName {
+    Person6 *sut = [Person6 new];
+    sut.bald = YES;
+    XCTAssertTrue(sut.isBald);
 }
 
 

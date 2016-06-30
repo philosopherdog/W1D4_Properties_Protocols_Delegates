@@ -31,7 +31,7 @@
 // Person2 shows the same code using a property
 
 @interface Person2 : NSObject
-@property (nonatomic) NSString *name;
+@property (nonatomic, strong) NSString *name;
 @end
 
 @implementation Person2
@@ -46,6 +46,8 @@
 
 @implementation Person3
 // NOTICE the compiler generates the setter for us, and we can override it to react to someone setting name!
+
+
 - (void)setName:(NSString *)name {
     self.label = name;
     _name = name;
@@ -136,7 +138,7 @@
 }
 
 //- (void)cantAccessIvar {
-//    Person *sut = [[Person alloc] init];
+//    Person1 *sut = [[Person1 alloc] init];
 //    NSString *result = [sut _name];
 //}
 

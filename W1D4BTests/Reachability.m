@@ -11,10 +11,10 @@
 @implementation Reachability
 - (void)someFakeEvent {
     
-    [self.delegate didBecomeReachableByWIFI:self];
+    [self.delegate reachabilityDidBecomeReachableByWIFI:self];
     
-    if ([self.delegate respondsToSelector:@selector(didBecomeReachableByCellularData:)]) {
-        [self.delegate didBecomeReachableByCellularData:self];
+    if ([self.delegate respondsToSelector:@selector(reachabilityDidBecomeReachableByCellularData:)]) {
+        [self.delegate reachabilityDidBecomeReachableByCellularData:self];
     }
 }
 @end

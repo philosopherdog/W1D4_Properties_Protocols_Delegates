@@ -13,6 +13,8 @@
 @interface Person2 : NSObject
 @property (nonatomic, copy) NSString *name;
 @end
+//@implementation Person2
+//@end
 
 
 @interface WeakCopyTests : XCTestCase

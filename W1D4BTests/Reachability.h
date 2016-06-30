@@ -10,9 +10,9 @@
 
 @class Reachability;
 @protocol ReachabilityDelegate <NSObject>
-- (void)didBecomeReachableByWIFI:(Reachability *)reachability;
+- (void)reachabilityDidBecomeReachableByWIFI:(Reachability *)reachability;
 @optional
-- (void)didBecomeReachableByCellularData:(Reachability *)reachability;
+- (void)reachabilityDidBecomeReachableByCellularData:(Reachability *)reachability;
 @end
 
 @interface Reachability : NSObject

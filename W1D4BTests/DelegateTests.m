@@ -25,7 +25,7 @@
  * 8. Initialize the delegating object from the delegate, and assign the delegate to the delegating objects delegate property
  // eg. - (void)someEvent {
  self.reachability = [Reachability new];
- r.delegate = self;
+ self.reachability.delegate = self;
  }
  */
 
@@ -36,6 +36,7 @@
 // properties just used for testing
 @property BOOL becameReachableByWIFI;
 @property BOOL becameReachableByCellularData;
+
 @property (nonatomic, strong) Reachability *reachability;
 @end
 
@@ -50,10 +51,10 @@
     return self;
 }
 
-- (void)didBecomeReachableByWIFI:(Reachability *)reachability {
+- (void)reachabilityDidBecomeReachableByWIFI:(Reachability *)reachability {
     self.becameReachableByWIFI = YES;
 }
-- (void)didBecomeReachableByCellularData:(Reachability *)reachability {
+- (void)reachabilityDidBecomeReachableByCellularData:(Reachability *)reachability {
     self.becameReachableByCellularData = YES;
 }
 @end
